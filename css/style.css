@@ -272,11 +272,11 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition-property: transform;
-  transition-duration: .3s;
+  transition: transform, background-size .3s;
 }
 .modelo:hover{
   transform: scale(1.1);
+  background-size: 30rem;
 }
 .modelo h3 {
   font-size: 2.4rem;
@@ -318,4 +318,45 @@ img {
 }
 .modelo-z .precio {
   font-size: 6rem;
+}
+
+/* NewsLetter */
+
+.newsletter{
+background-image: linear-gradient(to bottom, transparent 50%, var(--blanco) 0%),url(/img/newsletter.jpg);
+background-position: top center;
+background-repeat: no-repeat;
+background-size: 100%, 70rem;
+}
+@media (min-width: 768px) {
+  .newsletter{
+    background-image: linear-gradient(to right, transparent 50%, var(--blanco) 0%),url(/img/newsletter.jpg);
+    background-position: top left;
+    background-size: 100%, 100rem;
+
+    }
+}
+
+.contenido-newsletter{
+display: grid;
+grid-template-rows: repeat(2,30rem);
+gap:var(--separacion);
+}
+@media (min-width: 768px) {
+  .contenido-newsletter{
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+.texto-newsletter{
+grid-row: 2/3;
+}
+.formulario{
+
+}
+.formulario input[type="text"]{
+
+}
+.formulario input[type="submit"]{
+  
 }
